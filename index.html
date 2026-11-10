@@ -14,7 +14,10 @@
 <body>
 <main class="card">
 
-  <h1>Genocchi</h1>
+  <header class="title">
+    <p class="eyebrow">Contact</p>
+    <h1>Genocchi</h1>
+  </header>
   <div class="rule" aria-hidden="true"><span></span><i></i><span></span></div>
 
   <section class="contact" aria-label="Contact details">
@@ -37,6 +40,10 @@
   </section>
   <p class="status" id="status" role="status" aria-live="polite"></p>
 </main>
+<footer class="foot">
+  <svg class="flag" viewBox="0 0 3 2" role="img" aria-label="Flag of Ireland"><rect width="1" height="2" fill="#169b62"/><rect x="1" width="1" height="2" fill="#ffffff"/><rect x="2" width="1" height="2" fill="#ff883e"/></svg>
+  <p><time datetime="04:00">04:00</time>–<time datetime="21:00">21:00</time></p>
+</footer>
 <script>
 const btn = document.getElementById('copy'), label = btn.querySelector('span'), status = document.getElementById('status');
 btn.addEventListener('click', async () => {

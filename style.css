@@ -4,10 +4,12 @@
 --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 *{box-sizing:border-box;margin:0}
 html,body{height:100%}
-body{background:var(--ink) var(--grain);color:var(--paper);font-family:"Cinzel",Georgia,serif;display:grid;place-items:center;padding:clamp(16px,4vw,48px);-webkit-font-smoothing:antialiased}
-.card{position:relative;width:min(560px,100%);min-height:min(78vh,760px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(28px,5vh,44px);
+body{background:var(--ink) var(--grain);color:var(--paper);font-family:"Cinzel",Georgia,serif;display:flex;flex-direction:column;align-items:center;min-height:100vh;min-height:100dvh;padding:clamp(16px,4vw,48px) clamp(16px,4vw,48px) 0;-webkit-font-smoothing:antialiased}
+.card{position:relative;flex:1;width:min(560px,100%);min-height:min(78vh,760px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(28px,5vh,44px);
   padding:clamp(56px,10vw,88px) clamp(28px,7vw,64px);text-align:center}
 h1{font-family:"Merriweather",Georgia,serif;font-weight:700;font-size:clamp(2.5rem,11vw,4.5rem);letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.title{display:flex;flex-direction:column;align-items:flex-start}
+.eyebrow{font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);margin:0 0 10px .1em}
 .rule{display:flex;align-items:center;gap:12px;width:min(320px,80%);margin-top:-12px}
 .rule span{flex:1;height:1px;background:var(--line)}
 .rule i{width:8px;height:8px;border:1px solid var(--line);transform:rotate(45deg)}
@@ -24,5 +26,7 @@ h1{font-family:"Merriweather",Georgia,serif;font-weight:700;font-size:clamp(2.5r
 .btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5}
 .btn:hover,.btn.done{background:var(--paper);color:var(--ink)}
 .btn:focus-visible,.value a:focus-visible{outline:2px solid var(--paper);outline-offset:4px}
+.foot{display:flex;align-items:center;gap:12px;padding:20px 0 28px;font-size:.75rem;letter-spacing:.2em;color:var(--mute);font-variant-numeric:tabular-nums}
+.flag{width:24px;height:16px;display:block;outline:1px solid rgba(255,255,255,.15)}
 .status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media (prefers-reduced-motion:reduce){.btn{transition:none}}
